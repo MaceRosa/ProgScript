@@ -1,0 +1,111 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e1ecf1;
+}
+
+#app {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+
+}
+
+.personagem, .infos {
+    background-color: white;
+    border: 2px solid #1d509f;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    position: static;
+}
+
+.acoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1d509f;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #1a355e;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.barra-vida {
+    height: 30px;
+    background-color: #4CAF50;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.sprite, .img {
+    height: 100px;
+    margin-bottom: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+}
+
+.containerInfos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:3px;
+    
+}
+
+
+.eventBox {
+    background-color: white;
+    border: 2px solid #1d509f;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    max-height: 302px; /* add altura máxima para a div de eventos */
+    overflow-y: auto; /* add uma barra de rolagem vertical  */
+    position: static;
+}
+p {
+    border: 3px solid red; 
+    border-radius: 10px; 
+    padding: 5px; 
+}
+.vilao{
+    border: 3px solid orangered; 
+    border-radius: 10px; 
+    padding: 5px; 
+    margin-bottom: 1px;
+}
+.heroi{
+    border: 3px solid green; 
+    border-radius: 10px; 
+    padding: 5px;
+    margin-bottom: 1px;
+}
+

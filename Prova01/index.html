@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Prova - Jogo Herói e Vilão</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	
+</head>
+<body>
+<div id="app" class="container">
+        <div class="personagem">
+            <div class="barra-vida" :style="{width: heroi.vida + '%'}">{{ heroi.vida }}%</div>
+            <div class="sprite"><img class="img" src="https://pa1.aminoapps.com/7017/6bc755fffebdd6c94ac4d43ebb20eca0a3b9c225r1-500-287_hq.gif" alt="obito_gif"></div>
+            <h1>Obito</h1>
+            <div class="acoes">
+                <button @click="atacar(true)">Atacar</button>
+                <button @click="defender(true)">Defender</button>
+                <button @click="pocao(true)" class="curar">Usar Poção</button>
+                <button @click="correr(true)">Correr</button>
+            </div>
+        </div>
+        <div class="eventBox" ref="eventosLog">
+            <p v-for="(evento, index) in eventos" :key="index">{{ evento }}</p> <!-- -->
+        </div>
+        <div class="personagem" >
+            <div class="barra-vida" :style="{width: vilao.vida + '%'}">{{ vilao.vida }}%</div>
+            <div class="sprite"><img class="img" src="https://64.media.tumblr.com/d43023ea9afd23b17f40c147f65298e9/bfd3efa97206338d-57/s540x810/659a16869044299cc817b4fb714ba6173f34f222.gifv"></div>
+            <h1>Rock</h1>
+        </div>
+        <div class="infos">
+            <div class="containerInfos">
+                <h1 class="heroi">Obito </h1>
+                <h1 class="vilao">Rock</h1>
+                <p class="heroi">Ataque: 10</p>
+                <p class="vilao">Ataque: 20</p>
+                <p class="heroi">Defesa: 15</p>
+                <p class="vilao">Defesa: 8</p>
+                <p class="heroi">Cura: 20%</p>              
+                <p class="vilao">Cura: 10%</p>
+            </div>
+        </div>
+	
+</div>
+</body>
+</html>
+<script src="index.js"></script>
