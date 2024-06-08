@@ -1,0 +1,57 @@
+    [v-cloak] {
+        display: none;
+    }
+
+    body {
+        font-family: "Comic Sans MS";
+        background-color: #f5f5f5;
+        margin: 0;
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQePmzrYGYlO64DfxLnv-c0lGMVDz2KXRC3HA&s') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .search-bar {
+        text-align: center;
+        margin: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    li {
+        margin: 16px;
+        padding: 8px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease;
+        cursor: default;
+    }
+
+    .character-card {
+        text-align: center;
+    }
+
+    .character-card img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .character-name {
+        font-weight: bold;
+        margin: 10px;
+    }
+
+    .alive { background-color: green; }
+    .dead { background-color: red; }
+    .unknown { background-color: gray; }
+
+    .loading {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 20px;
+    }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Rick and Morty API</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+<div id="app" v-cloak>
+    <div class="search-bar">
+        <input type="text" v-model="searchText" placeholder="Procure um personagem">
+    </div>
+    <div class="personagens-container">
+        <ul>
+            <li v-for="character in filteredCharacter" :key="character.id" :class="getStatus(character.status)">
+                <div class="character-card">
+                    <img :src="character.image" alt="character-image">
+                    <p class="character-name">{{ character.name.toUpperCase() }}</p>
+                    <div class="details">
+                        <p>Status: {{ character.status }}</p>
+                        <p>Espécie: {{ character.species }}</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div v-if="loading" class="loading">Loading...</div>
+</div>
+</body>
+</html>
